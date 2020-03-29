@@ -1,0 +1,62 @@
+{
+  "id": "5a654966-e22e-4a78-b999-325796dfdafd",
+  "brand": "DELL",
+  "name": "Inspirion",
+  "cpu": {
+    "brand": "Intel",
+    "name": "i9-7980XE",
+    "core": 7,
+    "thread": 16,
+    "min_ghz": 2.5823197365022805,
+    "max_ghz": 2.59456307455211
+  },
+  "gpus": [
+    {
+      "brand": "AMD",
+      "name": "Radeon RX 5700 XT",
+      "min_ghz": 1.0582241549903157,
+      "max_ghz": 1.365958992850299,
+      "memory": {
+        "value": "5",
+        "unit": "GIGABYTE"
+      }
+    }
+  ],
+  "ram": {
+    "value": "9",
+    "unit": "GIGABYTE"
+  },
+  "storages": [
+    {
+      "driver": "HDD",
+      "memory": {
+        "value": "3",
+        "unit": "TERABYTE"
+      }
+    },
+    {
+      "driver": "SSD",
+      "memory": {
+        "value": "610",
+        "unit": "GIGABYTE"
+      }
+    }
+  ],
+  "screen": {
+    "resolution": {
+      "width": 6848,
+      "height": 3852
+    },
+    "size_inch": 123.81932,
+    "panel": "OLED",
+    "multitouch": true
+  },
+  "keyboard": {
+    "layout": "AZERTY",
+    "backlit": true
+  },
+  "weight_kg": 2.6157049855019574,
+  "price_usd": 2118.248057226735,
+  "release_year": 2014,
+  "updated_at": "2020-03-29T10:39:27.845725554Z"
+}
