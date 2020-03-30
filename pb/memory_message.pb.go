@@ -112,7 +112,9 @@ func init() {
 	proto.RegisterType((*Memory)(nil), "laptopstore.pcbook.Memory")
 }
 
-func init() { proto.RegisterFile("memory_message.proto", fileDescriptor_c0c7f919ccc765da) }
+func init() {
+	proto.RegisterFile("memory_message.proto", fileDescriptor_c0c7f919ccc765da)
+}
 
 var fileDescriptor_c0c7f919ccc765da = []byte{
 	// 204 bytes of a gzipped FileDescriptorProto

@@ -175,7 +175,9 @@ func init() {
 	proto.RegisterType((*GPU)(nil), "laptopstore.pcbook.GPU")
 }
 
-func init() { proto.RegisterFile("processor_message.proto", fileDescriptor_466578cecc6db379) }
+func init() {
+	proto.RegisterFile("processor_message.proto", fileDescriptor_466578cecc6db379)
+}
 
 var fileDescriptor_466578cecc6db379 = []byte{
 	// 235 bytes of a gzipped FileDescriptorProto

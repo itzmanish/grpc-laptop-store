@@ -164,7 +164,9 @@ func init() {
 	proto.RegisterType((*Screen_Resolution)(nil), "laptopstore.pcbook.Screen.Resolution")
 }
 
-func init() { proto.RegisterFile("screen_message.proto", fileDescriptor_8a2814cd02b8aba7) }
+func init() {
+	proto.RegisterFile("screen_message.proto", fileDescriptor_8a2814cd02b8aba7)
+}
 
 var fileDescriptor_8a2814cd02b8aba7 = []byte{
 	// 267 bytes of a gzipped FileDescriptorProto

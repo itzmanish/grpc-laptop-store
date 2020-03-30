@@ -103,7 +103,9 @@ func init() {
 	proto.RegisterType((*Keyboard)(nil), "laptopstore.pcbook.Keyboard")
 }
 
-func init() { proto.RegisterFile("keyboard_message.proto", fileDescriptor_8fd4226b8635fe5d) }
+func init() {
+	proto.RegisterFile("keyboard_message.proto", fileDescriptor_8fd4226b8635fe5d)
+}
 
 var fileDescriptor_8fd4226b8635fe5d = []byte{
 	// 181 bytes of a gzipped FileDescriptorProto

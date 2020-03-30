@@ -107,7 +107,9 @@ func init() {
 	proto.RegisterType((*CreateLaptopResponse)(nil), "laptopstore.pcbook.CreateLaptopResponse")
 }
 
-func init() { proto.RegisterFile("laptop_service.proto", fileDescriptor_240c60d9fb227e71) }
+func init() {
+	proto.RegisterFile("laptop_service.proto", fileDescriptor_240c60d9fb227e71)
+}
 
 var fileDescriptor_240c60d9fb227e71 = []byte{
 	// 182 bytes of a gzipped FileDescriptorProto
@@ -127,11 +129,11 @@ var fileDescriptor_240c60d9fb227e71 = []byte{
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ context.Context
-var _ grpc.ClientConn
+var _ grpc.ClientConnInterface
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
-const _ = grpc.SupportPackageIsVersion4
+const _ = grpc.SupportPackageIsVersion6
 
 // LaptopServiceClient is the client API for LaptopService service.
 //
@@ -141,10 +143,10 @@ type LaptopServiceClient interface {
 }
 
 type laptopServiceClient struct {
-	cc *grpc.ClientConn
+	cc grpc.ClientConnInterface
 }
 
-func NewLaptopServiceClient(cc *grpc.ClientConn) LaptopServiceClient {
+func NewLaptopServiceClient(cc grpc.ClientConnInterface) LaptopServiceClient {
 	return &laptopServiceClient{cc}
 }
 
