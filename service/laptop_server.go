@@ -37,6 +37,18 @@ func (server *LaptopServer) CreateLaptop(ctx context.Context, req *pb.CreateLapt
 		laptop.Id = id.String()
 	}
 
+	// halt for some second
+	// time.Sleep(6 * time.Second)
+
+	if ctx.Err() == context.Canceled {
+		log.Printf("Request canceled from client")
+		return nil, status.Errorf(codes.Canceled, "Request is canceled")
+	}
+	if ctx.Err() == context.DeadlineExceeded {
+		log.Printf("Deadline exceeded.")
+		return nil, status.Errorf(codes.DeadlineExceeded, "Deadline is exceeded")
+	}
+
 	// save the laptop to store
 	if err := server.Store.Save(laptop); err != nil {
 		code := codes.Internal

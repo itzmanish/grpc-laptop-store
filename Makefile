@@ -41,6 +41,16 @@ clean:
 	@rm pb/*.go
 	@echo 
 
+server:
+	@echo
+	@go run cmd/server/main.go -port 50051
+	@echo
+
+client:
+	@echo
+	@go run cmd/client/main.go -address 0.0.0.0:50051
+	@echo
+
 .PHONY: help
 all: help
 help: Makefile
