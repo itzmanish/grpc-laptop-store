@@ -62,3 +62,29 @@ func (server *LaptopServer) CreateLaptop(ctx context.Context, req *pb.CreateLapt
 		Id: laptop.Id,
 	}, nil
 }
+
+// FilterLaptop fiilters laptop and send a stream and return and error
+func (server *LaptopServer) FilterLaptop(req *pb.FilterLaptopRequest, stream pb.LaptopService_FilterLaptopServer) error {
+	filter := req.GetFilter()
+	log.Printf("recieved a search laptop request with filter: %v", filter)
+
+	err := server.Store.Search(
+		stream.Context(),
+		filter,
+		func(laptop *pb.Laptop) error {
+			res := &pb.FilterLaptopResponse{
+				Laptop: laptop,
+			}
+			err := stream.Send(res)
+			if err != nil {
+				return err
+			}
+			log.Printf("laptop with id %v sent", laptop.Id)
+			return nil
+		},
+	)
+	if err != nil {
+		return status.Errorf(codes.Internal, "Internal error occured during filter: %v", err)
+	}
+	return nil
+}
